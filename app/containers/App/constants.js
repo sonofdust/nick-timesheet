@@ -8,3 +8,7 @@
  * Follow this format:
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
+
+export const GET_DATA = 'nick-timesheet/App/GET_DATA';
+export const GET_DATA_SUCCESS = 'nick-timesheet/App/GET_DATA_SUCCESS';
+export const GET_DATA_ERROR = 'nick-timesheet/App/GET_DATA_ERROR';

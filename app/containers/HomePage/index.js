@@ -5,14 +5,34 @@
  *
  */
 
-import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+import React, { useState } from 'react';
+
+import CustomButton from 'components/Button';
+import ListBox from 'components/ListBox';
 
 export default function HomePage() {
+  const [test, setTest] = useState(null);
+
   return (
-    <h1>
-      <FormattedMessage {...messages.header} />
-    </h1>
+    <div>
+      <span>Hello World</span>
+      <CustomButton
+        onClick={() => {
+          console.log('Pushed');
+        }}
+      >
+        Push Me
+      </CustomButton>
+
+      <ListBox
+        items={['test1', 'test2', 'test3']}
+        onClick={item => {
+          console.log('clicked', item);
+          setTest(item);
+        }}
+      />
+
+      <div>{test}</div>
+    </div>
   );
 }
