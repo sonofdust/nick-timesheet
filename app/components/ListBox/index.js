@@ -5,8 +5,8 @@ function ListBox({ items, onClick }) {
   return (
     <ul>
       {items.map(item => (
-        <li key={item} onClick={() => onClick(item)}>
-          {item}
+        <li key={item.id} onClick={() => onClick(item)}>
+          {item.id} - {item.title}
         </li>
       ))}
     </ul>
@@ -14,6 +14,7 @@ function ListBox({ items, onClick }) {
 }
 
 ListBox.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.string),
+  items: PropTypes.array,
+  onClick: PropTypes.func,
 };
 export default memo(ListBox);

@@ -1,4 +1,4 @@
-import { call, put, takeLatest } from 'redux-saga/effects';
+import { call, put, takeLatest, delay } from 'redux-saga/effects';
 
 import request from 'utils/request';
 
@@ -7,6 +7,7 @@ import { GET_DATA } from './constants';
 
 export function* getApiData({ token }) {
   try {
+    // yield delay(2000);
     const response = yield call(
       request,
       `https://jsonplaceholder.typicode.com/todos`,
@@ -14,9 +15,8 @@ export function* getApiData({ token }) {
         method: 'GET',
       },
     );
-    console.log('response', response);
 
-    if (response && response.status === 200) {
+    if (response) {
       yield put(getDataSuccess(response));
     }
   } catch (err) {
