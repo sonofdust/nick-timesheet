@@ -19,7 +19,7 @@ import { compose } from 'redux';
 
 // import CustomButton from 'components/Button';
 // import ListBox from 'components/ListBox';
-// import Hours from '../../components/Hours';
+import Hours from '../../components/Hours';
 import saga from '../App/saga';
 import appReducer from '../App/reducer';
 
@@ -43,7 +43,7 @@ function HomePage({ onGetData, loading, data }) {
     <div>
       <RadioOptions />
 
-      {/* <Hours items={data} /> */}
+      <Hours items={data} />
       {/* <CustomButton
         onClick={() => {
           console.log('Pushed');
