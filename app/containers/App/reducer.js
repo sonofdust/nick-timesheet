@@ -7,7 +7,7 @@ import produce from 'immer';
 import { GET_DATA, GET_DATA_ERROR, GET_DATA_SUCCESS } from './constants';
 
 export const initialState = {
-  data: [],
+  data: {},
   loading: false,
   error: null,
 };
