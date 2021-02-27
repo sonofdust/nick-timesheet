@@ -20,6 +20,10 @@ import { compose } from 'redux';
 // import CustomButton from 'components/Button';
 // import ListBox from 'components/ListBox';
 import Hours from '../../components/Hours';
+import Comments from '../../components/comments';
+import Project from '../../components/project';
+import TaskInfo from '../../components/taskinfo';
+
 import saga from '../App/saga';
 import appReducer from '../App/reducer';
 
@@ -31,7 +35,6 @@ function HomePage({ onGetData, loading, data }) {
   useInjectSaga({ key: 'appPage', saga });
 
   useEffect(() => {
-    console.log('data:', data);
     onGetData('token');
   }, []);
 
@@ -42,8 +45,16 @@ function HomePage({ onGetData, loading, data }) {
   return (
     <div>
       <RadioOptions />
+      {/* <pre>{JSON.stringify(data)}</pre> */}
+      <Hours items={data} />  
+      <Comments items={data} />
+      <Project items={data} />
+      <TaskInfo items={data} />
 
-      <Hours items={data} />
+
+
+
+
       {/* <CustomButton
         onClick={() => {
           console.log('Pushed');
