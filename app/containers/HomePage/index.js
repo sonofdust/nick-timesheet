@@ -46,14 +46,10 @@ function HomePage({ onGetData, loading, data }) {
     <div>
       <RadioOptions />
       {/* <pre>{JSON.stringify(data)}</pre> */}
-      <Hours items={data} />  
+      <Hours items={data} />
       <Comments items={data} />
       <Project items={data} />
       <TaskInfo items={data} />
-
-
-
-
 
       {/* <CustomButton
         onClick={() => {

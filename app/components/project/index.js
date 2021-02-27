@@ -51,24 +51,16 @@ function Project({ items }) {
         </div>
       </div>
 
-      {o.taskDetails.map((e, i) => {
-        return [
-          timeRow(
-            e.jobName,
-            e.taskName,
-            e.project.name,
-            e.project.projectMgr,
-            e.project.billing,
-          ),
-          timeRow(
-            '',
-            '',
-            e.client.name,
-            e.project.costEng,
-            e.project.apContacts,
-          ),
-        ];
-      })}
+      {o.taskDetails.map((e, i) => [
+        timeRow(
+          e.jobName,
+          e.taskName,
+          e.project.name,
+          e.project.projectMgr,
+          e.project.billing,
+        ),
+        timeRow('', '', e.client.name, e.project.costEng, e.project.apContacts),
+      ])}
     </div>
   );
 }

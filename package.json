@@ -50,15 +50,10 @@
     "IE 10"
   ],
   "lint-staged": {
-    "*.js": [
-      "npm run lint:eslint:fix",
-      "git add --force",
-      "eslint --cache --fix",
-      "stylelint --fix"
-    ],
-    "*.json": [
+    "*.ts": [
+      "tslint",
       "prettier --write",
-      "git add --force"
+      "git add"
     ]
   },
   "pre-commit": "lint:staged",
@@ -172,7 +167,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
     }
   }
 }

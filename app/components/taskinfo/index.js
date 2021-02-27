@@ -43,12 +43,10 @@ function TaskInfo({ items }) {
         </div>
       </div>
 
-      {o.taskDetails.map((e, i) => {
-        return [
-          newRow(e.jobName, e.taskName, e.task.dateOpened, e.task.name),
-          newRow('', '', '', e.task.description),
-        ];
-      })}
+      {o.taskDetails.map((e, i) => [
+        newRow(e.jobName, e.taskName, e.task.dateOpened, e.task.name),
+        newRow('', '', '', e.task.description),
+      ])}
     </div>
   );
 }

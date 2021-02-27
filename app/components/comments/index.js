@@ -27,7 +27,7 @@ function Comments({ items }) {
             <span> {e.taskName}</span>
           </div>
           <div className="box box-border-next flex-4">
-            <textarea cols='51'>{e.comments}</textarea>
+            <textarea cols="51">{e.comments}</textarea>
           </div>
         </div>
       ))}

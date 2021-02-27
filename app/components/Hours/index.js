@@ -22,19 +22,16 @@ const timeRow = (jobName, taskName, time) => (
           i == 0 || i == 6 ? 'box-green' : ''
         } box-border-next flex-1`}
       >
-        <span>{e/100}</span>
-
+        <span>{e / 100}</span>
 
         {/* <div class="md-form">
   <input placeholder="Selected time" type="text" id="input_starttime" class="form-control timepicker">
   <label for="input_starttime">Light version, 12hours</label>
 </div> */}
-
-
       </div>
     ))}
     <div className="box box-border-next flex-1">
-      <span>{time.reduce((x, y) => x + y)/100}</span>
+      <span>{time.reduce((x, y) => x + y) / 100}</span>
     </div>
   </div>
 );
@@ -63,12 +60,10 @@ function HoursTable({ items }) {
         </div>
       </div>
 
-      {o.taskDetails.map((e, i) => {
-        return [
-          timeRow(e.jobName, e.taskName, e.time.reg),
-          timeRow('', '', e.time.ot),
-        ];
-      })}
+      {o.taskDetails.map((e, i) => [
+        timeRow(e.jobName, e.taskName, e.time.reg),
+        timeRow('', '', e.time.ot),
+      ])}
     </div>
   );
 }
@@ -77,4 +72,3 @@ HoursTable.propTypes = {
   items: PropTypes.object,
 };
 export default memo(HoursTable);
-
