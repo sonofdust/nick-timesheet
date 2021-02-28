@@ -44,8 +44,9 @@ function HomePage({ onGetData, loading, data }) {
 
   return (
     <div>
-      <RadioOptions />
       {/* <pre>{JSON.stringify(data)}</pre> */}
+      <RadioOptions />
+
       <Hours items={data} />
       <Comments items={data} />
       <Project items={data} />

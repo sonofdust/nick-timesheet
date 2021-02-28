@@ -1,4 +1,10 @@
-.container{width: 750px;}
+/* The following line can be included in a src/App.scss */
+
+  /* @import '~bootstrap/scss/bootstrap'; */
+
+/* The following line can be included in your src/index.js or App.js file */
+
+.container{width: 950px;}
 
 .btn-clr{background-color: #3fb4ef;}
 
@@ -23,10 +29,11 @@
 .flex-4{flex:4;}
 .flex-1{flex:1;}
 .flex-2{flex:2;}
+.flex-3{flex:3;}
 
 .box{
     display: flex;
     align-items: center;
-    justify-content: center; 
+    justify-content: left; 
     /* height: 25px; */
     }

@@ -1,5 +1,3 @@
-import './project.css';
-
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 // import ItemSelect from "../Common/itemSelect";
