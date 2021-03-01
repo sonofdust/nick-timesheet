@@ -14,30 +14,30 @@ function RadioOptions() {
     'Task Info',
   ];
   return (
-    <div
-      className="container row"
-    >
-      {items.map((e, i) => (
-        <div
-          className="box header-green box-border-next border-top box-border-left flex-1"
-          key={e}
-        >
-          <input
-            // className="form-check-input"
-            type="radio"
-            name="inlineRadioOptions"
-            id={`inlineRadio${i}`}
-            value={`option${i}`}
-            // onClick={() => alert(`inlineRadio${i}`)}
-          />
-          <label
-            // className="form-check-label"
-            htmlFor={`inlineRadio${i}`}
+    <div className="container">
+      <div className="row">
+        {items.map((e, i) => (
+          <div
+            className="box header-green box-border-next border-top box-border-left flex-1"
+            key={e}
           >
-            {e}
-          </label>
-        </div>
-      ))}
+            <input
+              // className="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id={`inlineRadio${i}`}
+              value={`option${i}`}
+              // onClick={() => alert(`inlineRadio${i}`)}
+            />
+            <label
+              // className="form-check-label"
+              htmlFor={`inlineRadio${i}`}
+            >
+              {e}
+            </label>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
