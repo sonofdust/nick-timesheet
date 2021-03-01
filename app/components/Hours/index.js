@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 // import ItemSelect from "../Common/itemSelect";
 import { v4 } from 'uuid';
-import Table from 'react-bootstrap/Table';
+// import Table from 'react-bootstrap/Table';
 import { AppData } from './clientTestData';
 
 const dayOfWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
@@ -18,7 +18,7 @@ const timeRow = (jobName, taskName, time) => (
       <div
         className={`box ${
           i == 0 || i == 6 ? 'box-green' : ''
-        } box-border-next flex-1`}
+        } box-border-next flex-1 center`}
       >
         <span>{e / 100}</span>
 
@@ -28,7 +28,7 @@ const timeRow = (jobName, taskName, time) => (
 </div> */}
       </div>
     ))}
-    <div className="box box-border-next flex-1">
+    <div className="box box-border-next flex-1 center">
       <span>{time.reduce((x, y) => x + y) / 100}</span>
     </div>
   </div>
@@ -39,7 +39,7 @@ function HoursTable({ items }) {
   return (
     <div className="container">
       <div className="row">
-        <div className="box header-blue box-border-next border-top box-border-left flex-4">
+        <div className="box header-blue box-border-next border-top box-border-left flex-4 center">
           <h9>CLIENT TASK </h9>
           <button>+</button>
         </div>
@@ -48,12 +48,12 @@ function HoursTable({ items }) {
           <div
             className={`box ${
               i == 0 || i == 6 ? 'header-green' : 'header-blue'
-            } box-border-next border-top flex-1`}
+            } box-border-next border-top flex-1 center`}
           >
             <span>{e}</span>
           </div>
         ))}
-        <div className="box header-blue box-border-next border-top flex-1">
+        <div className="box header-blue box-border-next border-top flex-1 center">
           <span>Total</span>
         </div>
       </div>

@@ -32,19 +32,19 @@ function Project({ items }) {
   return (
     <div className="container">
       <div className="row">
-        <div className="box header-blue box-border-next border-top box-border-left flex-1">
+        <div className="box header-blue box-border-next border-top box-border-left flex-1 center">
           <span>Job</span>
         </div>
-        <div className="box header-blue box-border-next border-top flex-1">
+        <div className="box header-blue box-border-next border-top flex-1 center">
           <span>Task</span>
         </div>
-        <div className="box header-blue box-border-next border-top flex-3">
+        <div className="box header-blue box-border-next border-top flex-3 center">
           <span>Project/Client.</span>
         </div>
-        <div className="box header-blue box-border-next border-top flex-3">
+        <div className="box header-blue box-border-next border-top flex-3 center">
           <span>Proj Manager/Const Eng.</span>
         </div>
-        <div className="box header-blue box-border-next border-top flex-3">
+        <div className="box header-blue box-border-next border-top flex-3 center">
           <span>Billing/AP Contracts</span>
         </div>
       </div>

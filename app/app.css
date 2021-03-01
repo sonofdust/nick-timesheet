@@ -1,39 +1,75 @@
 /* The following line can be included in a src/App.scss */
 
-  /* @import '~bootstrap/scss/bootstrap'; */
+/* @import '~bootstrap/scss/bootstrap'; */
 
 /* The following line can be included in your src/index.js or App.js file */
 
-.container{width: 950px;}
-
-.btn-clr{background-color: #3fb4ef;}
-
-.row{display:flex;}
-
-.header-blue{background-color: #dee7f4;}
-
-.header-green{background-color: #bbe6c9;}
-
-.box-green{background-color: #f4fbf5;}
-
-.box-border-top{border-top:1px #ebebeb solid; }
-.row:hover {background-color: lightgray}
-
-.box-border-left{border-left:1px #ebebeb solid; }
-
-.box-border-next{
-    border-bottom:1px #ebebeb solid; 
-    border-right:1px #ebebeb solid; 
+.container {
+  width: 950px;
 }
 
-.flex-4{flex:4;}
-.flex-1{flex:1;}
-.flex-2{flex:2;}
-.flex-3{flex:3;}
+.btn-clr {
+  background-color: #3fb4ef;
+}
 
-.box{
-    display: flex;
-    align-items: center;
-    justify-content: left; 
-    /* height: 25px; */
-    }
+.row {
+  display: flex;
+}
+
+.header-blue {
+  background-color: #dee7f4;
+}
+
+.header-green {
+  background-color: #bbe6c9;
+}
+
+.box-green {
+  background-color: #f4fbf5;
+}
+
+.box-border-top {
+  border-top: 1px #ebebeb solid;
+}
+.row:hover {
+  background-color: lightgray;
+}
+
+.box-border-left {
+  border-left: 1px #ebebeb solid;
+}
+
+.box-border-next {
+  border-bottom: 1px #ebebeb solid;
+  border-right: 1px #ebebeb solid;
+}
+
+.padd {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-3 {
+  flex: 3;
+}
+.flex-4 {
+  flex: 4;
+}
+
+.left {
+  justify-content: left;
+}
+.center {
+  justify-content: center;
+}
+.box {
+  display: flex;
+  align-items: center;
+
+  /* height: 25px; */
+}

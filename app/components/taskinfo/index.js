@@ -28,16 +28,16 @@ function TaskInfo({ items }) {
   return (
     <div className="container">
       <div className="row">
-        <div className="box header-blue box-border-next border-top box-border-left flex-2">
+        <div className="box header-blue box-border-next border-top box-border-left flex-2 center">
           <span>JOB</span>
         </div>
-        <div className="box header-blue box-border-next border-top flex-2">
+        <div className="box header-blue box-border-next border-top flex-2 center">
           <span>Task</span>
         </div>
-        <div className="box header-blue box-border-next border-top flex-2">
+        <div className="box header-blue box-border-next border-top flex-2 center">
           <span>Date Opened</span>
         </div>
-        <div className="box header-blue box-border-next border-top flex-2">
+        <div className="box header-blue box-border-next border-top flex-2 center">
           <span>Task/Area Description</span>
         </div>
       </div>

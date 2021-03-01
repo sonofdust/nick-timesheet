@@ -7,8 +7,7 @@
 // import 'bootstrap/dist/css/bootstrap.css';
 // import 'bootstrap/dist/css/bootstrap-theme.css';
 import RadioOptions from 'components/RadioOptions';
-
-import React, { useEffect, memo } from 'react';
+import React, { useEffect, memo, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { useInjectSaga } from 'utils/injectSaga';
@@ -23,6 +22,7 @@ import Hours from '../../components/Hours';
 import Comments from '../../components/comments';
 import Project from '../../components/project';
 import TaskInfo from '../../components/taskinfo';
+import FcoQpms from '../../components/fcoqpms';
 
 import saga from '../App/saga';
 import appReducer from '../App/reducer';
@@ -42,15 +42,63 @@ function HomePage({ onGetData, loading, data }) {
     return <div>Loading...</div>;
   }
 
+  const [display, setDisplay] = useState('HOURS');
+  // Move this to another folder in which you keep track of enums or constants.
+  const Tabs = {
+    Hours: 'HOURS',
+    FCOQPMS: 'FCOQPMS',
+    ClientData: 'CLIENTDATA',
+    Comments: 'COMMENTS',
+    TSCorr: 'TSCORR',
+    Project: 'PROJECT',
+    TaskInfo: 'TASKINFO',
+  };
+
+  const getTab = () => {
+    switch (display) {
+      case Tabs.Hours:
+        return <Hours items={data} />;
+      case Tabs.FCOQPMS:
+        return <FcoQpms items={data} />;
+      case Tabs.ClientData:
+        return (
+          <div className="container">
+            <div className="row">
+              <label>WAITING FOR REQUIREMENTS.</label>;
+            </div>
+          </div>
+        );
+      case Tabs.Comments:
+        return <Comments items={data} />;
+      case Tabs.TSCorr:
+      case Tabs.ClientData:
+        return (
+          <div className="container">
+            <div className="row">
+              <label>WAITING FOR REQUIREMENTS.</label>;
+            </div>
+          </div>
+        );
+      case Tabs.Project:
+        return <Project items={data} />;
+      case Tabs.TaskInfo:
+        return <TaskInfo items={data} />;
+      default:
+        return <Hours items={data} />;
+    }
+  };
+
   return (
     <div>
       {/* <pre>{JSON.stringify(data)}</pre> */}
-      <RadioOptions />
 
-      <Hours items={data} />
+      <RadioOptions screen={tag => setDisplay(tag)} />
+      {getTab()}
+
+      {/* <Hours items={data} />
       <Comments items={data} />
       <Project items={data} />
-      <TaskInfo items={data} />
+      <TaskInfo items={data} /> */}
 
       {/* <CustomButton
         onClick={() => {

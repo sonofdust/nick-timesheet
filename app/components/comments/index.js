@@ -6,16 +6,16 @@ import { AppData } from './clientTestData';
 function Comments({ items }) {
   return (
 
-    
+
     <div className="container">
       <div className="row">
-        <div className="box header-blue box-border-next border-top box-border-left flex-1">
+        <div className="box header-blue box-border-next border-top box-border-left flex-1 center">
           <span>JOB</span>
         </div>
-        <div className="box header-blue box-border-next flex-1">
+        <div className="box header-blue box-border-next flex-1 center">
           <span>TASK</span>
         </div>
-        <div className="box header-blue box-border-next border-top flex-4">
+        <div className="box header-blue box-border-next border-top flex-4 center">
           <span>COMMENT</span>
         </div>
       </div>
