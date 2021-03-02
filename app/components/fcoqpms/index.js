@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import { AppData } from './clientTestData';
+import Select from '../select';
 
 function FcoQpms({ items }) {
   return (
@@ -32,28 +33,13 @@ function FcoQpms({ items }) {
             <span> {e.taskName}</span>
           </div>
           <div className="box box-border-next flex-4">
-            <select name="cars" id="cars">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-            </select>{' '}
+            <Select list={['A001', 'A002', 'A003', 'A004', 'A005', 'A006']} />
           </div>
           <div className="box box-border-next flex-4">
-            <select name="cars" id="cars">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-            </select>{' '}
+            <Select list={['A001', 'A002', 'A003', 'A004', 'A005', 'A006']} />
           </div>
           <div className="box box-border-next flex-4">
-            <select name="cars" id="cars">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-            </select>{' '}
+            <Select list={['A001', 'A002', 'A003', 'A004', 'A005', 'A006']} />
           </div>
         </div>
       ))}
@@ -62,6 +48,6 @@ function FcoQpms({ items }) {
 }
 
 FcoQpms.propTypes = {
-  items: PropTypes.object,
+//  items: PropTypes.array,
 };
 export default memo(FcoQpms);
