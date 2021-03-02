@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // import ItemSelect from "../Common/itemSelect";
 import { v4 } from 'uuid';
 // import Table from 'react-bootstrap/Table';
-import { AppData } from './clientTestData';
+import { AppData } from '../../clientTestData';
 
 const newRow = (p1, p2, p3, p4) => (
   <div className="row" key={v4}>

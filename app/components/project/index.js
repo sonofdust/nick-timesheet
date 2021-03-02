@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 // import ItemSelect from "../Common/itemSelect";
 import { v4 } from 'uuid';
 // import Table from 'react-bootstrap/Table';
-import { AppData } from './clientTestData';
+import { AppData } from '../../clientTestData';
 
 // const dayOfWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 

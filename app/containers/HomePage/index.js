@@ -64,7 +64,7 @@ function HomePage({ onGetData, loading, data }) {
         return (
           <div className="container">
             <div className="row">
-              <label>WAITING FOR REQUIREMENTS.</label>;
+              <label>WAITING FOR REQUIREMENTS.</label>
             </div>
           </div>
         );
@@ -75,7 +75,7 @@ function HomePage({ onGetData, loading, data }) {
         return (
           <div className="container">
             <div className="row">
-              <label>WAITING FOR REQUIREMENTS.</label>;
+              <label>WAITING FOR REQUIREMENTS.</label>
             </div>
           </div>
         );
