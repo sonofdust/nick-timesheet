@@ -34,6 +34,7 @@ function RadioOptions(props) {
                 props.screen(e.target.id);
                 setValue(e.target.id);
               }}
+              checked
             />
             <label
               // className="form-check-label"

@@ -3,6 +3,22 @@
 /* @import '~bootstrap/scss/bootstrap'; */
 
 /* The following line can be included in your src/index.js or App.js file */
+.btnBorder {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.btnBorder:hover {
+  cursor: pointer;
+}
+
+.screencenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
 
 .container {
   width: 950px;
@@ -32,7 +48,7 @@
   border-top: 1px #ebebeb solid;
 }
 .row:hover {
-  background-color: lightgray;
+  background-color: bisque;
 }
 
 .box-border-left {
@@ -70,6 +86,4 @@
 .box {
   display: flex;
   align-items: center;
-
-  /* height: 25px; */
 }

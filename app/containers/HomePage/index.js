@@ -89,33 +89,10 @@ function HomePage({ onGetData, loading, data }) {
   };
 
   return (
-    <div>
+    <div className="screencenter">
       {/* <pre>{JSON.stringify(data)}</pre> */}
-
       <RadioOptions screen={tag => setDisplay(tag)} />
       {getTab()}
-
-      {/* <Hours items={data} />
-      <Comments items={data} />
-      <Project items={data} />
-      <TaskInfo items={data} /> */}
-
-      {/* <CustomButton
-        onClick={() => {
-          console.log('Pushed');
-        }}
-      >
-        Push Me
-      </CustomButton> */}
-
-      {/* <ListBox
-        items={data}
-        onClick={item => {
-//          alert(JSON.stringify(item));
-          console.log('clicked', item);
-          setTest(item);
-        }}
-      /> */}
     </div>
   );
 }

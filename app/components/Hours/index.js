@@ -1,21 +1,30 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-// import ItemSelect from "../Common/itemSelect";
 import { v4 } from 'uuid';
-// import Table from 'react-bootstrap/Table';
 import { AppData } from '../../clientTestData';
-// import edit from "@material-ui/icons/Home"
-// import ThreeDRotation from '@material-ui/core';
+import { FaTrashAlt, FaEdit } from 'react-icons/fa';
 
 const dayOfWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+
+const editdelete = (j, t) => {
+  return !j.length && !t.length
+    ? ''
+    : [
+        <div className="btnBorder">
+          <FaEdit />
+        </div>,
+        <div className="btnBorder">
+          <FaTrashAlt />
+        </div>,
+        <div>{j}</div>,
+        <div>{t}</div>,
+      ];
+};
 
 const timeRow = (jobName, taskName, time) => (
   <div className="row" key={v4}>
     <div className="box box-border-next box-border-left flex-4">
-      <label>
-        <i class="fas fa-edit">xx</i>
-        {jobName} {taskName}
-      </label>
+      {editdelete(jobName, taskName)}
     </div>
     {time.map((e, i) => (
       <div

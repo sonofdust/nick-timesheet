@@ -1,7 +1,5 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-// import ItemSelect from "../Common/itemSelect";
-import { v4 } from 'uuid';
 
 const Select = (props) => {
   return (
