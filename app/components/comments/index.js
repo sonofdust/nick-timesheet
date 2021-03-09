@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import { AppData } from '../../clientTestData';
 // import { FaTrashAlt, FaEdit } from 'react-icons/fa';
-import Modal from '../modal';
+import Modal from '../modalcomment';
 function Comments({ items }) {
   // const [modalIsOpen, setModalIsOpen] = useState(false);
 

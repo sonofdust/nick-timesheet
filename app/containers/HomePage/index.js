@@ -30,6 +30,7 @@ import appReducer from '../App/reducer';
 import { getData } from '../App/actions';
 import { makeSelectData, makeSelectLoading } from '../App/selectors';
 
+
 function HomePage({ onGetData, loading, data }) {
   useInjectReducer({ key: 'appPage', reducer: appReducer });
   useInjectSaga({ key: 'appPage', saga });
@@ -89,7 +90,7 @@ function HomePage({ onGetData, loading, data }) {
   };
 
   return (
-    <div className="screencenter">
+    <div>
       {/* <pre>{JSON.stringify(data)}</pre> */}
       <RadioOptions screen={tag => setDisplay(tag)} />
       {getTab()}
